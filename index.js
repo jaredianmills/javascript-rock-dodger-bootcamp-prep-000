@@ -78,11 +78,11 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   let left = positionToInteger(DODGER.style.left);
+  if (left < 4) {
+    DODGER.style.left = '0px';
+    return;
+  } else {
   function step() {
-    if (left < 4) {
-      DODGER.style.left = '0px';
-      return;
-    } else {
     DODGER.style.left = `${left -= 4}px`;
     if (left > 0) {
       window.requestAnimationFrame(step);
@@ -94,11 +94,11 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   let right = positionToInteger(DODGER.style.left);
+  if (right > 356) {
+    DODGER.style.left = '360px';
+    return;
+  } else {
   function step() {
-    if (right > 356) {
-      DODGER.style.left = '360px';
-      return;
-    } else {
     DODGER.style.left = `${right += 4}px`;
     if (right < 360) {
       window.requestAnimationFrame(step);
