@@ -73,7 +73,7 @@ function moveDodger(e) {
     e.stopPropagation();
     moveDodgerRight();
     e.preventDefault();
-  }
+    }
 }
 
 function moveDodgerLeft() {
@@ -104,6 +104,7 @@ function moveDodgerRight() {
       window.requestAnimationFrame(step);
     }
   }
+}
   window.requestAnimationFrame(step);
 }
 
