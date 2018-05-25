@@ -65,6 +65,7 @@ function endGame() {
 
 function moveDodger(e) {
     if (e.which === LEFT_ARROW) {
+      if
       e.stopPropagation();
       moveDodgerLeft();
       e.preventDefault();
@@ -77,7 +78,7 @@ function moveDodger(e) {
   }
 
 function moveDodgerLeft() {
-  var left = positionToInteger(DODGER.style.left);
+  let left = positionToInteger(DODGER.style.left);
   if (left < 4) {
     DODGER.style.left = '0px';
     return;
@@ -93,7 +94,7 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-  var right = positionToInteger(DODGER.style.left);
+  let right = positionToInteger(DODGER.style.left);
   if (right > 356) {
     DODGER.style.left = '360px';
     return;
