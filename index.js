@@ -64,18 +64,17 @@ function endGame() {
 
 
 function moveDodger(e) {
-    if (e.which === LEFT_ARROW) {
-      if
-      e.stopPropagation();
-      moveDodgerLeft();
-      e.preventDefault();
+  if (e.which === LEFT_ARROW) {
+    e.stopPropagation();
+    moveDodgerLeft();
+    e.preventDefault();
   }
-    if (e.which === RIGHT_ARROW) {
-      e.stopPropagation();
-      moveDodgerRight();
-      e.preventDefault();
-    }
+  if (e.which === RIGHT_ARROW) {
+    e.stopPropagation();
+    moveDodgerRight();
+    e.preventDefault();
   }
+}
 
 function moveDodgerLeft() {
   let left = positionToInteger(DODGER.style.left);
