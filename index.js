@@ -73,7 +73,7 @@ function moveDodger(e) {
     e.stopPropagation();
     moveDodgerRight();
     e.preventDefault();
-    }
+  }
 }
 
 function moveDodgerLeft() {
