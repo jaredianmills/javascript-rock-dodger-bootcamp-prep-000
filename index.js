@@ -64,8 +64,12 @@ function endGame() {
 
 
 function moveDodger(e) {
-    if (e.which === LEFT_ARROW) {
-      if
+  let left = positionToInteger(DODGER.style.left);
+  if (e.which === LEFT_ARROW) {
+    if (left < 4) {
+      DODGER.style.left = '0px';
+      return;
+    } else {
       e.stopPropagation();
       moveDodgerLeft();
       e.preventDefault();
